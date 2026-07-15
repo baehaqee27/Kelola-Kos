@@ -5,8 +5,8 @@
   "type": "module",
   "main": "server.js",
   "scripts": {
-    "start": "node --no-warnings server.js",
-    "dev": "node --no-warnings --watch server.js"
+    "start": "node --no-warnings --experimental-sqlite server.js",
+    "dev": "node --no-warnings --experimental-sqlite --watch server.js"
   },
   "keywords": [
     "kos",
