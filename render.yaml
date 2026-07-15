@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: kelola-kos
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node --no-warnings --experimental-sqlite server.js
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: JWT_SECRET
+        generateValue: true
+      - key: DB_PATH
+        value: /data/kelolakos.db
+    disks:
+      - name: data
+        mountPath: /data
+        sizeGB: 1

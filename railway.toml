@@ -1,6 +1,0 @@
-[build]
-builder = "RAILPACK"
-
-[deploy]
-healthcheckPath = "/api/health"
-healthcheckTimeout = 300
