@@ -1,23 +1,24 @@
 {
   "name": "kelolakos",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "KelolaKos - Aplikasi web manajemen kos (mobile-first PWA)",
   "type": "module",
   "main": "server.js",
   "scripts": {
-    "start": "node --no-warnings --experimental-sqlite server.js",
-    "dev": "node --no-warnings --experimental-sqlite --watch server.js"
+    "start": "node --no-warnings server.js",
+    "dev": "TURSO_DATABASE_URL=file:local.db node --no-warnings --watch server.js"
   },
   "keywords": [
     "kos",
     "boarding-house",
     "pwa",
     "express",
-    "sqlite"
+    "turso"
   ],
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "@libsql/client": "^0.14.0",
     "bcryptjs": "^2.4.3",
     "cookie-parser": "^1.4.6",
     "dotenv": "^16.4.5",
